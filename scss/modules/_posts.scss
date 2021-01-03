@@ -1,0 +1,41 @@
+.posts {
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: repeat(3, 460px);
+  grid-template-rows: 360px 360px 360px 1fr;
+  grid-gap: 55px;
+  margin: 85px auto;
+
+  &__item {
+    background-color: #1a1a1a;
+    overflow: hidden;
+    cursor: pointer;
+
+    &--1 {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    &--2 {
+    }
+
+    &--3 {
+    }
+
+    &--4,
+    &--5,
+    &--6 {
+      grid-row: span 2;
+      max-height: 580px;
+    }
+  }
+
+  &__img {
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+      transform: scale(1.1);
+    }
+  }
+}
